@@ -1,0 +1,26 @@
+controller_manager:
+  ros_parameters:
+    update_rate: 30
+    use_sim_time: true
+
+    diff_cont:
+      type: diff_drive_controller/DiffDriveController
+    
+    joint_broad:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+
+diff_cont:
+  ros_parameters:
+
+    publish_rate: 50.0 # You can set this higher than the controller manager update rate, but it will be throttled
+    base_frame_id: base_link
+
+    left_front_wheel_names: ['left_front_wheel_joint']
+    left_rear_wheel_names: ['left_rear_wheel_joint']
+    right_front_wheel_names: ['right_front_wheel_joint']
+    right_rear_wheel_names: ['right_rear_wheel_joint']
+    wheel_separation: 0.17  
+    wheel_radius: 0.045
+
+    use_stamped_vel: false
