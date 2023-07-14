@@ -41,7 +41,7 @@
 
     <gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-            <parameters>$(find FAR_bot-main)/config/my_controllers.yaml</parameters>
+            <parameters>$(find far_bot)/config/my_controllers.yaml</parameters>
         </plugin>
     </gazebo>
 </robot>
